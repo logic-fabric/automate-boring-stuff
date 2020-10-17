@@ -1,2 +1,3 @@
-# automate-boring-stuff
-Training using the book Automate the Boring Stuff with Python 
+# Automate the Boring Stuff
+
+Training repo on the book *Automate the Boring Stuff with Python* - Oct 2020
