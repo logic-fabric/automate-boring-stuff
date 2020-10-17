@@ -1,6 +1,16 @@
 from inventory import stringify_inventory
 
 
+COMPLEX_INVENTORY = {
+    'arrow': 12,
+    'gold coin': 14,
+    'rope': 1,
+    'torch': 5,
+    'dagger': 1,
+    'silver coin': 53,
+    'platinum coin': 1,
+}
+
 def test_with_an_empty_inventory():
     inventory = dict()
     expected_string = """
@@ -79,15 +89,7 @@ Total: 1 item and 1 coin
     assert stringify_inventory(inventory) == expected_string
 
 def test_stringify_a_complex_inventory():
-    inventory = {
-        'arrow': 12,
-        'gold coin': 14,
-        'rope': 1,
-        'torch': 5,
-        'dagger': 1,
-        'silver coin': 53,
-        'platinum coin': 1,
-    }
+    inventory = dict(COMPLEX_INVENTORY)
     expected_string = """
 INVENTORY
 =========

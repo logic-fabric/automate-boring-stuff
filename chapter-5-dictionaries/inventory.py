@@ -24,6 +24,14 @@ if given inventory = {
 }
 """
 
+def add_loot_to_inventory(inventory, loot):
+    for stuff in loot:
+        if stuff in inventory:
+            inventory[stuff] += 1
+        else:
+            inventory[stuff] =1
+    
+    return inventory
 
 def stringify_inventory(inventory):
     equipment = [
