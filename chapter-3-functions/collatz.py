@@ -13,4 +13,15 @@ def collatz(n):
 
 
 if __name__ == "__main__":
-    pass
+    
+    for starting_integer in range(1, 21):
+        n = starting_integer
+        sequence = [n]
+
+        while n != 1:
+            n = collatz(n)
+            sequence.append(n)
+
+        output = " ".join([str(n) for n in sequence])
+        print(f"Collatz conjecture verified with {starting_integer}:")
+        print(output)
