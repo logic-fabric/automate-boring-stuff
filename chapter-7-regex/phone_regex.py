@@ -1,8 +1,13 @@
-"""Implement a function that returns True if text is an american phone number: a DDD-DDD-DDDD formated string.
+"""Implement a function that returns True if text is an american phone number: DDD-DDD-DDDD (only format accepted by is_vaid_phone_number_without_regex)
+DDD DDD DDDD
+(DDD)-DDD-DDDD
+(DDD) DDD DDDD
 """
 
+import re
 
-def is_phone_number_without_regex(text):
+
+def is_valid_phone_number_without_regex(text):
     if len(text) != 12:
         return False
 
@@ -13,6 +18,14 @@ def is_phone_number_without_regex(text):
             return False
 
     return True
+
+def is_valid_phone_number_with_regex(text):
+    pattern = r"\d{3}-\d{3}-\d{4}"
+    pattern += r"|\d{3} \d{3} \d{4}"
+    pattern += r"|\(?\d{3}\)?-\d{3}-\d{4}"
+    pattern += r"|\(?\d{3}\)? \d{3} \d{4}"
+    
+    return bool(re.search(pattern, text))
 
 
 if __name__ == '__main__':
