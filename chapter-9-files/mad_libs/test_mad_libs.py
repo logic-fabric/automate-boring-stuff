@@ -41,12 +41,16 @@ class TestWriteUserSentenceInTextFile:
         
         assert USER_SENTENCE_FILE in os.listdir('.')
 
+        os.unlink(USER_SENTENCE_FILE)
+
     def test_user_sentence_is_user_sentence_file_content(self):
         write_user_sentence_in_text_file(USER_SENTENCE)
 
         with open(USER_SENTENCE_FILE) as f:
             content = f.read()
             assert content == USER_SENTENCE
+        
+        os.unlink(USER_SENTENCE_FILE)
 
 class TestMadLibs:
 
