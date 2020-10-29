@@ -126,4 +126,4 @@ def encrypt_pdf(pdf_file, user_password, owner_password=None):
 
 
 if __name__ == '__main__':
-    encrypt_pdf('minutes.pdf', '')
+    pass
