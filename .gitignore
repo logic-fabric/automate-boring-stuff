@@ -1,5 +1,6 @@
 *.csv
 *.pdf
+*.png
 .DS_Store
 
 venv/
