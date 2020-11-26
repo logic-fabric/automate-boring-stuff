@@ -1,6 +1,5 @@
 *.csv
 *.pdf
-*.png
 .DS_Store
 settings.py
 
